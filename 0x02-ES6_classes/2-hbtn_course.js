@@ -1,4 +1,5 @@
 /* eslint-disable no-underscore-dangle */
+
 export default class HolbertonCourse {
   /**
    * Creates a new HolbertonCourse class
@@ -9,6 +10,7 @@ export default class HolbertonCourse {
    *
    * Implement getters and setters for each attribute
    */
+
   constructor(name, length, students) {
     this.name = name;
     this.length = length;
