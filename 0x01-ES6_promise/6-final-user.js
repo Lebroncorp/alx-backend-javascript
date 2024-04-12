@@ -8,13 +8,11 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   * Takes in an array of Promises.
   * Returns a new Promise.
   */
-
   return Promise
-    // Call signUpUser() and uploadPhoto() functions
-
+    // Call the signUpUser() and uploadPhoto() functions
     .allSettled([signUpUser(firstName, lastName), uploadPhoto(fileName)])
-    // When d promises are settled it returns array with structures
-
+    // When the promises are all settled it should return an array with the
+    // given structure
     .then((results) => (
       results.map((out) => ({
         status: out.status,
